@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  color: #212429;
+}
+
+/*NAVBAR*/
+
+.header {
+  display: flex;
+  background-color: #58585a;
+  align-items: center;
+  height: 65px;
+}
+
+.header .brand {
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+.header .brand img {
+  height: 50px;
+  transition: all 0.3s;
+}
+
+.header .brand img:hover {
+  transform: scale(1.2);
+}
+
+.header .nav-links{
+  margin-right: 30px;
+}
+
+.header .nav-links li{
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.header .nav-links li:hover{
+  transform: scale(1.1);
+}
+
+.header .nav-links a{
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.active{
+  color:red;
+  text-shadow: 1px 1px 2px black;
+}
+
+.disabled{
+  color: beige;
+  opacity: 4;
+}
+
+/*HOME*/
+
+.poke-home{
+  margin-top: 35px;
+}
+
+.poke-home p{
+  font-size: 60px;
+}
+
+.poke-home img{
+  width: 400px;
+}
+
+/*POKEMONES*/
+
+.select-container{
+  padding: 30px;
+}
+
+.select-container p{
+  font-size: 50px;
+}
+
+.select-container form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.select-container select{
+  width: 20%;
+  padding: 10px;
+}
+
+.select-container button {
+  color: beige;
+  background-color: #212429;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/*POKEMON*/
