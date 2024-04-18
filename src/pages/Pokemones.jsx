@@ -10,12 +10,14 @@ export const Pokemones = () => {
 
   useEffect(() => {
     const getPokemones = async () => {
-      const res = await fetch ('https://pokeapi.co/api/v2/pokemon')
-      const data = await res.json()
-      const { results } = data
-
-      setNombres(results)
-      setSelected(results[0].name)
+      try{
+        const res = await fetch ('https://pokeapi.co/api/v2/pokemon?limit=100&offset=0')
+        const data = await res.json()
+        setNombres(data.results)
+        setSelected(data.results[0].name)
+      } catch (error) {
+        console.error(error);
+      } 
     }
 
     getPokemones()
@@ -35,10 +37,13 @@ export const Pokemones = () => {
     <div className="select-container">
       <p>Selecciona un pokemón</p>
       <form onSubmit={handleSubmit}>
+        <label htmlFor="selected">Elige un pokemón</label>
         <select id='selected' onChange={handleChange}>
-          {
-            nombres.map((opts,id)=> <option key={id} value={opts.name}>{opts.name}</option> )
-          }
+            {
+              nombres.map((opts,id)=> 
+                <option style={{backgroundColor: '#58585a',color: 'white'}} key={id} value={opts.name}>{opts.name}</option>
+              )
+            }
         </select>
         <button type="submit">Ver Detalle</button>
       </form>

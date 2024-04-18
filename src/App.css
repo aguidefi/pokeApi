@@ -60,7 +60,7 @@
 /*HOME*/
 
 .poke-home{
-  margin-top: 35px;
+  margin-top: 25px;
 }
 
 .poke-home p{
@@ -68,7 +68,7 @@
 }
 
 .poke-home img{
-  width: 400px;
+  width: 380px;
 }
 
 /*POKEMONES*/
@@ -85,20 +85,53 @@
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+  align-items: center;
 }
 
 .select-container select{
+  border-radius: 5px;
+  border-color: #ceced8;
   width: 20%;
   padding: 10px;
 }
 
 .select-container button {
   color: beige;
-  background-color: #212429;
+  background-color: #242830;
   font-size: 20px;
   padding: 10px;
   margin-top: 20px;
   border-radius: 5px;
+  width: 150px;
 }
 
 /*POKEMON*/
+
+.card{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  margin: 25px 260px ;
+  width: 830px;
+  height: 500px;
+  border-radius: 30px;
+}
+
+.card-img {
+  width: 480px;
+  height: 480px;
+}
+
+.card p{
+  margin-top: 300px;
+  box-shadow: 1px 1px 2px rgb(45, 191, 240) ;
+  background-color: rgb(25, 150, 150);
+  border-radius: 5px ;
+  padding: 4px;
+}
+
+.list-group{
+  width: 200px;
+}
+
