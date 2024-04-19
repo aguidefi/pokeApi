@@ -47,7 +47,7 @@ export const Pokemon = () => {
           </div>
         </Card>
       ) : (
-        <h1 style={{ marginTop: '150px '}}>Cargando tu Pokemón...</h1>
+        <h1 style={{ marginTop: '5%'}}>Cargando tu Pokemón...</h1>
       )}
     </div>
   )
