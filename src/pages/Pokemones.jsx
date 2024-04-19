@@ -37,8 +37,7 @@ export const Pokemones = () => {
     <div className="select-container">
       <p>Selecciona un pokemón</p>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="selected">Elige un pokemón</label>
-        <select id='selected' onChange={handleChange}>
+        <select onChange={handleChange}>
             {
               nombres.map((opts,id)=> 
                 <option style={{backgroundColor: '#58585a',color: 'white'}} key={id} value={opts.name}>{opts.name}</option>

@@ -27,28 +27,28 @@ export const Pokemon = () => {
 
 
   return (
-    <>
+    <div className='card-container'>
       {loading ? (
         <Card border='danger' className="text-danger">
           <Card.Img src={pokeInfo.sprites.other.dream_world.front_default} alt={pokeInfo.name} />
-          <Card.Text><strong>{pokeInfo.types[0].type.name}</strong></Card.Text>
           <div>
             <Card.Body className="text-danger">
-              <Card.Title style={{textTransform: 'uppercase'}}>{pokeInfo.name}</Card.Title>
+              <Card.Title style={{textTransform: 'uppercase', fontSize: '30px', fontFamily: 'Pokemon Solid'}}>{pokeInfo.name}</Card.Title>
+              <Card.Text><strong>{pokeInfo.types[0].type.name}</strong></Card.Text>
             </Card.Body>
             <ListGroup variant="flush">
-              <ListGroup.Item>hp: {pokeInfo.stats[0].base_stat}</ListGroup.Item>
-              <ListGroup.Item>attack: {pokeInfo.stats[1].base_stat}</ListGroup.Item>
-              <ListGroup.Item>defense: {pokeInfo.stats[2].base_stat}</ListGroup.Item>
-              <ListGroup.Item>special-attack: {pokeInfo.stats[3].base_stat}</ListGroup.Item>
-              <ListGroup.Item>special-defense: {pokeInfo.stats[4].base_stat}</ListGroup.Item>
-              <ListGroup.Item>speed: {pokeInfo.stats[5].base_stat}</ListGroup.Item>
+              <ListGroup.Item style={{backgroundColor:'#58585a', color: 'white'}}>hp: {pokeInfo.stats[0].base_stat}</ListGroup.Item>
+              <ListGroup.Item style={{backgroundColor:'#58585a', color: 'white'}}>attack: {pokeInfo.stats[1].base_stat}</ListGroup.Item>
+              <ListGroup.Item style={{backgroundColor:'#58585a', color: 'white'}}>defense: {pokeInfo.stats[2].base_stat}</ListGroup.Item>
+              <ListGroup.Item style={{backgroundColor:'#58585a', color: 'white'}}>special-attack: {pokeInfo.stats[3].base_stat}</ListGroup.Item>
+              <ListGroup.Item style={{backgroundColor:'#58585a', color: 'white'}}>special-defense: {pokeInfo.stats[4].base_stat}</ListGroup.Item>
+              <ListGroup.Item style={{backgroundColor:'#58585a', color: 'white'}}>speed: {pokeInfo.stats[5].base_stat}</ListGroup.Item>
             </ListGroup>
           </div>
         </Card>
       ) : (
         <h1 style={{ marginTop: '150px '}}>Cargando tu Pokemón...</h1>
       )}
-    </>
+    </div>
   )
 }
